@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 namespace CodePlex.Tools.HttpSysConfig
 {
     using System;
@@ -66,12 +69,7 @@ namespace CodePlex.Tools.HttpSysConfig
             return true;
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Not Yet Implemented :(", "Coming Soon...", MessageBoxButtons.OK);
-        }
-
-#region ACL
+        #region ACL
 
         private void aclAdd_Click(object sender, EventArgs e)
         {
@@ -206,37 +204,37 @@ namespace CodePlex.Tools.HttpSysConfig
             AclSetEditing(true);
         }
 
-        private void aclDelete_Click(object sender, EventArgs e)
-        {
-            HttpConfigUrlAclEntry entry = AclFindCurrentEntry();
-            if (entry != null)
-            {
-                DialogResult result = MessageBox.Show("Are you sure you want to delete the following UrlAcl?\r\n\r\n" + entry.UriPrefix, "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    try
-                    {
-                        entry.Delete();
-                    }
-                    catch (Win32Exception exception)
-                    {
-                        MessageBox.Show("An error occurred while attempting to delete, the error message was:\r\n\r\n" + exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        private void aclDelete_Click(object sender, EventArgs e) {
+            var selectedEntries = AclFindCurrentEntries();
+            DialogResult result = MessageBox.Show("Are you sure you want to delete the following UrlAcl's?\r\n\r\n" + string.Join(", ", selectedEntries.Select(p => p.UriPrefix)), "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes) {
+                foreach (var entry in selectedEntries) {
+                    if (entry != null) {
+                        try {
+                            entry.Delete();
+                        } catch (Win32Exception exception) {
+                            MessageBox.Show("An error occurred while attempting to delete, the error message was:\r\n\r\n" + exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
+
             Reload();
         }
 
         private void aclEdit_Click(object sender, EventArgs e)
         {
-            aclEditedEntry = AclFindCurrentEntry();
+            aclEditedEntry = AclFindCurrentEntry(true);
             AclSetEditing(true);
         }
 
-        HttpConfigUrlAclEntry AclFindCurrentEntry()
+        HttpConfigUrlAclEntry AclFindCurrentEntry(bool failOnMultiple)
         {
-            if (this.aclTab.SelectedTab == this.aclListTab)
-            {
+            if (this.aclTab.SelectedTab == this.aclListTab) {
+                if (this.aclList.SelectedItems.Count > 1 && failOnMultiple) {
+                    MessageBox.Show("Please select only one entry", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return null;
+                }
                 return this.aclList.SelectedItem as HttpConfigUrlAclEntry;
             }
             TreeNode node = this.aclTree.SelectedNode;
@@ -274,6 +272,15 @@ namespace CodePlex.Tools.HttpSysConfig
             return null;
         }
 
+        private List<HttpConfigUrlAclEntry> AclFindCurrentEntries() {
+            if (this.aclTab.SelectedTab == this.aclListTab)
+                return this.aclList.SelectedItems
+                    .Cast<HttpConfigUrlAclEntry>()
+                    .ToList();
+
+            return null;
+        }
+
         private void aclList_SelectedIndexChanged(object sender, EventArgs e)
         {
             AclPopulate();
@@ -281,7 +288,7 @@ namespace CodePlex.Tools.HttpSysConfig
 
         void AclPopulate()
         {
-            HttpConfigUrlAclEntry entry = AclFindCurrentEntry();
+            HttpConfigUrlAclEntry entry = AclFindCurrentEntry(false);
             if (entry != null)
             {
                 this.aclEdit.Enabled = true;
@@ -409,40 +416,12 @@ namespace CodePlex.Tools.HttpSysConfig
             this.aclPath.Enabled = editing;
             this.aclTree.Enabled = !editing;
         }
-
-        private void aclSsl_CheckedChanged(object sender, EventArgs e)
-        {
-            this.aclSsl.Text = "Enable SSL: " + (this.aclSsl.Checked ? Uri.UriSchemeHttps : Uri.UriSchemeHttp) + "://";
-        }
-
-#endregion ACL
-
-#region SSL
-
+        
         private void aclTree_AfterSelect(object sender, TreeViewEventArgs e)
         {
             AclPopulate();
         }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void exportToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Not Yet Implemented :(", "Coming Soon...", MessageBoxButtons.OK);
-        }
-
-        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Not Yet Implemented :(", "Coming Soon...", MessageBoxButtons.OK);
-        }
-
-        private void importToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Not Yet Implemented :(", "Coming Soon...", MessageBoxButtons.OK);
-        }
+        #endregion ACL
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -471,6 +450,12 @@ namespace CodePlex.Tools.HttpSysConfig
             SslReload();
         }
 
+        #region SSL
+        private void aclSsl_CheckedChanged(object sender, EventArgs e)
+        {
+            this.aclSsl.Text = "Enable SSL: " + (this.aclSsl.Checked ? Uri.UriSchemeHttps : Uri.UriSchemeHttp) + "://";
+        }
+        
         private void sslApply_Click(object sender, EventArgs e)
         {
             bool deleted = false;
@@ -640,8 +625,6 @@ namespace CodePlex.Tools.HttpSysConfig
                 this.sslCheckFresh.Enabled = this.sslCheckRevocation.Checked;
             }
         }
-
-#endregion SSL
 
         void SslClear()
         {
@@ -878,5 +861,6 @@ namespace CodePlex.Tools.HttpSysConfig
         {
             SslPopulate();
         }
+        #endregion SSL
     }
 }

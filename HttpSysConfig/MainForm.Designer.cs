@@ -2,14 +2,8 @@ namespace CodePlex.Tools.HttpSysConfig
 {
     partial class MainForm
     {
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ListBox aclAccounts;
         private System.Windows.Forms.Button aclAdd;
-        private System.Windows.Forms.Button aclApply;
-        private System.Windows.Forms.Button aclCancel;
-        private System.Windows.Forms.Button aclCreate;
-        private System.Windows.Forms.Button aclDelete;
-        private System.Windows.Forms.Button aclEdit;
         private System.Windows.Forms.ComboBox aclHostname;
         private System.Windows.Forms.Label aclLabelAccounts;
         private System.Windows.Forms.Label aclLabelHostname;
@@ -31,16 +25,9 @@ namespace CodePlex.Tools.HttpSysConfig
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem howDoIToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
 
         private System.Windows.Forms.TabControl mainTab;
 
-        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ComboBox sslAddress;
         private System.Windows.Forms.TextBox sslAppId;
         private System.Windows.Forms.Button sslApply;
@@ -78,8 +65,6 @@ namespace CodePlex.Tools.HttpSysConfig
         private System.Windows.Forms.TreeView sslTree;
         private System.Windows.Forms.TabPage sslTreeTab;
         private System.Windows.Forms.CheckBox sslUseDSMapper;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -100,18 +85,7 @@ namespace CodePlex.Tools.HttpSysConfig
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.howDoIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        private void InitializeComponent() {
             this.mainTab = new System.Windows.Forms.TabControl();
             this.aclTabPage = new System.Windows.Forms.TabPage();
             this.aclSplitContainer = new System.Windows.Forms.SplitContainer();
@@ -121,10 +95,11 @@ namespace CodePlex.Tools.HttpSysConfig
             this.aclTreeTab = new System.Windows.Forms.TabPage();
             this.aclTree = new System.Windows.Forms.TreeView();
             this.aclDelete = new System.Windows.Forms.Button();
-            this.aclLabelAccounts = new System.Windows.Forms.Label();
             this.aclCancel = new System.Windows.Forms.Button();
             this.aclApply = new System.Windows.Forms.Button();
             this.aclEdit = new System.Windows.Forms.Button();
+            this.aclCreate = new System.Windows.Forms.Button();
+            this.aclLabelAccounts = new System.Windows.Forms.Label();
             this.aclRemove = new System.Windows.Forms.Button();
             this.aclAdd = new System.Windows.Forms.Button();
             this.aclLabelPath = new System.Windows.Forms.Label();
@@ -134,7 +109,6 @@ namespace CodePlex.Tools.HttpSysConfig
             this.aclPath = new System.Windows.Forms.TextBox();
             this.aclPort = new System.Windows.Forms.TextBox();
             this.aclSsl = new System.Windows.Forms.CheckBox();
-            this.aclCreate = new System.Windows.Forms.Button();
             this.aclAccounts = new System.Windows.Forms.ListBox();
             this.sslTabPage = new System.Windows.Forms.TabPage();
             this.sslSplitContainer = new System.Windows.Forms.SplitContainer();
@@ -172,9 +146,9 @@ namespace CodePlex.Tools.HttpSysConfig
             this.sslCertHash = new System.Windows.Forms.ComboBox();
             this.sslPort = new System.Windows.Forms.TextBox();
             this.sslCreate = new System.Windows.Forms.Button();
-            this.menuStrip.SuspendLayout();
             this.mainTab.SuspendLayout();
             this.aclTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aclSplitContainer)).BeginInit();
             this.aclSplitContainer.Panel1.SuspendLayout();
             this.aclSplitContainer.Panel2.SuspendLayout();
             this.aclSplitContainer.SuspendLayout();
@@ -182,6 +156,7 @@ namespace CodePlex.Tools.HttpSysConfig
             this.aclListTab.SuspendLayout();
             this.aclTreeTab.SuspendLayout();
             this.sslTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sslSplitContainer)).BeginInit();
             this.sslSplitContainer.Panel1.SuspendLayout();
             this.sslSplitContainer.Panel2.SuspendLayout();
             this.sslSplitContainer.SuspendLayout();
@@ -192,101 +167,27 @@ namespace CodePlex.Tools.HttpSysConfig
             this.sslGroupBoxRevocation.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip
-            // 
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(683, 24);
-            this.menuStrip.TabIndex = 2;
-            this.menuStrip.Text = "menuStrip";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportToolStripMenuItem,
-            this.importToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // exportToolStripMenuItem
-            // 
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.exportToolStripMenuItem.Text = "Import Settings...";
-            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
-            // 
-            // importToolStripMenuItem
-            // 
-            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.importToolStripMenuItem.Text = "Export Settings...";
-            this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(161, 6);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.howDoIToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // howDoIToolStripMenuItem
-            // 
-            this.howDoIToolStripMenuItem.Name = "howDoIToolStripMenuItem";
-            this.howDoIToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.howDoIToolStripMenuItem.Text = "How Do I";
-            this.howDoIToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(184, 6);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.aboutToolStripMenuItem.Text = "About HttpSysConfig";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
             // mainTab
             // 
             this.mainTab.Controls.Add(this.aclTabPage);
             this.mainTab.Controls.Add(this.sslTabPage);
             this.mainTab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainTab.Location = new System.Drawing.Point(0, 24);
+            this.mainTab.Location = new System.Drawing.Point(0, 0);
+            this.mainTab.Margin = new System.Windows.Forms.Padding(4);
             this.mainTab.Name = "mainTab";
             this.mainTab.SelectedIndex = 0;
-            this.mainTab.Size = new System.Drawing.Size(683, 512);
+            this.mainTab.Size = new System.Drawing.Size(914, 661);
             this.mainTab.TabIndex = 12;
             // 
             // aclTabPage
             // 
             this.aclTabPage.Controls.Add(this.aclSplitContainer);
-            this.aclTabPage.Location = new System.Drawing.Point(4, 22);
+            this.aclTabPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aclTabPage.Location = new System.Drawing.Point(4, 25);
+            this.aclTabPage.Margin = new System.Windows.Forms.Padding(4);
             this.aclTabPage.Name = "aclTabPage";
-            this.aclTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.aclTabPage.Size = new System.Drawing.Size(675, 486);
+            this.aclTabPage.Padding = new System.Windows.Forms.Padding(4);
+            this.aclTabPage.Size = new System.Drawing.Size(906, 632);
             this.aclTabPage.TabIndex = 3;
             this.aclTabPage.Text = "Url Acl";
             this.aclTabPage.UseVisualStyleBackColor = true;
@@ -294,7 +195,8 @@ namespace CodePlex.Tools.HttpSysConfig
             // aclSplitContainer
             // 
             this.aclSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aclSplitContainer.Location = new System.Drawing.Point(3, 3);
+            this.aclSplitContainer.Location = new System.Drawing.Point(4, 4);
+            this.aclSplitContainer.Margin = new System.Windows.Forms.Padding(4);
             this.aclSplitContainer.Name = "aclSplitContainer";
             // 
             // aclSplitContainer.Panel1
@@ -304,10 +206,11 @@ namespace CodePlex.Tools.HttpSysConfig
             // aclSplitContainer.Panel2
             // 
             this.aclSplitContainer.Panel2.Controls.Add(this.aclDelete);
-            this.aclSplitContainer.Panel2.Controls.Add(this.aclLabelAccounts);
             this.aclSplitContainer.Panel2.Controls.Add(this.aclCancel);
             this.aclSplitContainer.Panel2.Controls.Add(this.aclApply);
             this.aclSplitContainer.Panel2.Controls.Add(this.aclEdit);
+            this.aclSplitContainer.Panel2.Controls.Add(this.aclCreate);
+            this.aclSplitContainer.Panel2.Controls.Add(this.aclLabelAccounts);
             this.aclSplitContainer.Panel2.Controls.Add(this.aclRemove);
             this.aclSplitContainer.Panel2.Controls.Add(this.aclAdd);
             this.aclSplitContainer.Panel2.Controls.Add(this.aclLabelPath);
@@ -317,10 +220,10 @@ namespace CodePlex.Tools.HttpSysConfig
             this.aclSplitContainer.Panel2.Controls.Add(this.aclPath);
             this.aclSplitContainer.Panel2.Controls.Add(this.aclPort);
             this.aclSplitContainer.Panel2.Controls.Add(this.aclSsl);
-            this.aclSplitContainer.Panel2.Controls.Add(this.aclCreate);
             this.aclSplitContainer.Panel2.Controls.Add(this.aclAccounts);
-            this.aclSplitContainer.Size = new System.Drawing.Size(669, 480);
-            this.aclSplitContainer.SplitterDistance = 280;
+            this.aclSplitContainer.Size = new System.Drawing.Size(898, 624);
+            this.aclSplitContainer.SplitterDistance = 300;
+            this.aclSplitContainer.SplitterWidth = 5;
             this.aclSplitContainer.TabIndex = 1;
             // 
             // aclTab
@@ -329,18 +232,20 @@ namespace CodePlex.Tools.HttpSysConfig
             this.aclTab.Controls.Add(this.aclTreeTab);
             this.aclTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.aclTab.Location = new System.Drawing.Point(0, 0);
+            this.aclTab.Margin = new System.Windows.Forms.Padding(4);
             this.aclTab.Name = "aclTab";
             this.aclTab.SelectedIndex = 0;
-            this.aclTab.Size = new System.Drawing.Size(280, 480);
+            this.aclTab.Size = new System.Drawing.Size(300, 624);
             this.aclTab.TabIndex = 4;
             // 
             // aclListTab
             // 
             this.aclListTab.Controls.Add(this.aclList);
-            this.aclListTab.Location = new System.Drawing.Point(4, 22);
+            this.aclListTab.Location = new System.Drawing.Point(4, 25);
+            this.aclListTab.Margin = new System.Windows.Forms.Padding(4);
             this.aclListTab.Name = "aclListTab";
-            this.aclListTab.Padding = new System.Windows.Forms.Padding(3);
-            this.aclListTab.Size = new System.Drawing.Size(272, 454);
+            this.aclListTab.Padding = new System.Windows.Forms.Padding(4);
+            this.aclListTab.Size = new System.Drawing.Size(292, 595);
             this.aclListTab.TabIndex = 2;
             this.aclListTab.Text = "List View";
             this.aclListTab.UseVisualStyleBackColor = true;
@@ -349,19 +254,23 @@ namespace CodePlex.Tools.HttpSysConfig
             // 
             this.aclList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.aclList.FormattingEnabled = true;
-            this.aclList.Location = new System.Drawing.Point(3, 3);
+            this.aclList.ItemHeight = 16;
+            this.aclList.Location = new System.Drawing.Point(4, 4);
+            this.aclList.Margin = new System.Windows.Forms.Padding(4);
             this.aclList.Name = "aclList";
-            this.aclList.Size = new System.Drawing.Size(266, 446);
+            this.aclList.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.aclList.Size = new System.Drawing.Size(284, 587);
             this.aclList.TabIndex = 0;
             this.aclList.SelectedIndexChanged += new System.EventHandler(this.aclList_SelectedIndexChanged);
             // 
             // aclTreeTab
             // 
             this.aclTreeTab.Controls.Add(this.aclTree);
-            this.aclTreeTab.Location = new System.Drawing.Point(4, 22);
+            this.aclTreeTab.Location = new System.Drawing.Point(4, 25);
+            this.aclTreeTab.Margin = new System.Windows.Forms.Padding(4);
             this.aclTreeTab.Name = "aclTreeTab";
-            this.aclTreeTab.Padding = new System.Windows.Forms.Padding(3);
-            this.aclTreeTab.Size = new System.Drawing.Size(272, 454);
+            this.aclTreeTab.Padding = new System.Windows.Forms.Padding(4);
+            this.aclTreeTab.Size = new System.Drawing.Size(292, 595);
             this.aclTreeTab.TabIndex = 1;
             this.aclTreeTab.Text = "Tree View";
             this.aclTreeTab.UseVisualStyleBackColor = true;
@@ -369,9 +278,10 @@ namespace CodePlex.Tools.HttpSysConfig
             // aclTree
             // 
             this.aclTree.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aclTree.Location = new System.Drawing.Point(3, 3);
+            this.aclTree.Location = new System.Drawing.Point(4, 4);
+            this.aclTree.Margin = new System.Windows.Forms.Padding(4);
             this.aclTree.Name = "aclTree";
-            this.aclTree.Size = new System.Drawing.Size(266, 448);
+            this.aclTree.Size = new System.Drawing.Size(284, 587);
             this.aclTree.TabIndex = 20;
             this.aclTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.aclTree_AfterSelect);
             // 
@@ -379,31 +289,24 @@ namespace CodePlex.Tools.HttpSysConfig
             // 
             this.aclDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.aclDelete.Cursor = System.Windows.Forms.Cursors.Default;
-            this.aclDelete.Location = new System.Drawing.Point(143, 452);
+            this.aclDelete.Location = new System.Drawing.Point(267, 588);
+            this.aclDelete.Margin = new System.Windows.Forms.Padding(4);
             this.aclDelete.Name = "aclDelete";
-            this.aclDelete.Size = new System.Drawing.Size(75, 23);
-            this.aclDelete.TabIndex = 35;
+            this.aclDelete.Size = new System.Drawing.Size(100, 28);
+            this.aclDelete.TabIndex = 63;
             this.aclDelete.Text = "Delete";
             this.aclDelete.UseVisualStyleBackColor = true;
             this.aclDelete.Click += new System.EventHandler(this.aclDelete_Click);
-            // 
-            // aclLabelAccounts
-            // 
-            this.aclLabelAccounts.AutoSize = true;
-            this.aclLabelAccounts.Location = new System.Drawing.Point(0, 108);
-            this.aclLabelAccounts.Name = "aclLabelAccounts";
-            this.aclLabelAccounts.Size = new System.Drawing.Size(55, 13);
-            this.aclLabelAccounts.TabIndex = 57;
-            this.aclLabelAccounts.Text = "Accounts:";
             // 
             // aclCancel
             // 
             this.aclCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.aclCancel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.aclCancel.Location = new System.Drawing.Point(305, 423);
+            this.aclCancel.Location = new System.Drawing.Point(483, 552);
+            this.aclCancel.Margin = new System.Windows.Forms.Padding(4);
             this.aclCancel.Name = "aclCancel";
-            this.aclCancel.Size = new System.Drawing.Size(75, 23);
-            this.aclCancel.TabIndex = 55;
+            this.aclCancel.Size = new System.Drawing.Size(100, 28);
+            this.aclCancel.TabIndex = 67;
             this.aclCancel.Text = "Cancel";
             this.aclCancel.UseVisualStyleBackColor = true;
             this.aclCancel.Click += new System.EventHandler(this.aclCancel_Click);
@@ -412,10 +315,11 @@ namespace CodePlex.Tools.HttpSysConfig
             // 
             this.aclApply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.aclApply.Cursor = System.Windows.Forms.Cursors.Default;
-            this.aclApply.Location = new System.Drawing.Point(224, 423);
+            this.aclApply.Location = new System.Drawing.Point(375, 552);
+            this.aclApply.Margin = new System.Windows.Forms.Padding(4);
             this.aclApply.Name = "aclApply";
-            this.aclApply.Size = new System.Drawing.Size(75, 23);
-            this.aclApply.TabIndex = 50;
+            this.aclApply.Size = new System.Drawing.Size(100, 28);
+            this.aclApply.TabIndex = 66;
             this.aclApply.Text = "Apply";
             this.aclApply.UseVisualStyleBackColor = true;
             this.aclApply.Click += new System.EventHandler(this.aclApply_Click);
@@ -424,19 +328,44 @@ namespace CodePlex.Tools.HttpSysConfig
             // 
             this.aclEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.aclEdit.Cursor = System.Windows.Forms.Cursors.Default;
-            this.aclEdit.Location = new System.Drawing.Point(224, 452);
+            this.aclEdit.Location = new System.Drawing.Point(375, 588);
+            this.aclEdit.Margin = new System.Windows.Forms.Padding(4);
             this.aclEdit.Name = "aclEdit";
-            this.aclEdit.Size = new System.Drawing.Size(75, 23);
-            this.aclEdit.TabIndex = 40;
+            this.aclEdit.Size = new System.Drawing.Size(100, 28);
+            this.aclEdit.TabIndex = 64;
             this.aclEdit.Text = "Edit";
             this.aclEdit.UseVisualStyleBackColor = true;
             this.aclEdit.Click += new System.EventHandler(this.aclEdit_Click);
             // 
+            // aclCreate
+            // 
+            this.aclCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.aclCreate.Cursor = System.Windows.Forms.Cursors.Default;
+            this.aclCreate.Location = new System.Drawing.Point(483, 588);
+            this.aclCreate.Margin = new System.Windows.Forms.Padding(4);
+            this.aclCreate.Name = "aclCreate";
+            this.aclCreate.Size = new System.Drawing.Size(100, 28);
+            this.aclCreate.TabIndex = 65;
+            this.aclCreate.Text = "Create";
+            this.aclCreate.UseVisualStyleBackColor = true;
+            this.aclCreate.Click += new System.EventHandler(this.aclCreate_Click);
+            // 
+            // aclLabelAccounts
+            // 
+            this.aclLabelAccounts.AutoSize = true;
+            this.aclLabelAccounts.Location = new System.Drawing.Point(0, 133);
+            this.aclLabelAccounts.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.aclLabelAccounts.Name = "aclLabelAccounts";
+            this.aclLabelAccounts.Size = new System.Drawing.Size(70, 17);
+            this.aclLabelAccounts.TabIndex = 57;
+            this.aclLabelAccounts.Text = "Accounts:";
+            // 
             // aclRemove
             // 
-            this.aclRemove.Location = new System.Drawing.Point(84, 238);
+            this.aclRemove.Location = new System.Drawing.Point(112, 293);
+            this.aclRemove.Margin = new System.Windows.Forms.Padding(4);
             this.aclRemove.Name = "aclRemove";
-            this.aclRemove.Size = new System.Drawing.Size(75, 23);
+            this.aclRemove.Size = new System.Drawing.Size(100, 28);
             this.aclRemove.TabIndex = 30;
             this.aclRemove.Text = "Remove";
             this.aclRemove.UseVisualStyleBackColor = true;
@@ -444,9 +373,10 @@ namespace CodePlex.Tools.HttpSysConfig
             // 
             // aclAdd
             // 
-            this.aclAdd.Location = new System.Drawing.Point(0, 238);
+            this.aclAdd.Location = new System.Drawing.Point(0, 293);
+            this.aclAdd.Margin = new System.Windows.Forms.Padding(4);
             this.aclAdd.Name = "aclAdd";
-            this.aclAdd.Size = new System.Drawing.Size(75, 23);
+            this.aclAdd.Size = new System.Drawing.Size(100, 28);
             this.aclAdd.TabIndex = 25;
             this.aclAdd.Text = "Add";
             this.aclAdd.UseVisualStyleBackColor = true;
@@ -455,99 +385,93 @@ namespace CodePlex.Tools.HttpSysConfig
             // aclLabelPath
             // 
             this.aclLabelPath.AutoSize = true;
-            this.aclLabelPath.Location = new System.Drawing.Point(0, 84);
+            this.aclLabelPath.Location = new System.Drawing.Point(0, 103);
+            this.aclLabelPath.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.aclLabelPath.Name = "aclLabelPath";
-            this.aclLabelPath.Size = new System.Drawing.Size(32, 13);
+            this.aclLabelPath.Size = new System.Drawing.Size(41, 17);
             this.aclLabelPath.TabIndex = 50;
             this.aclLabelPath.Text = "Path:";
             // 
             // aclLabelPort
             // 
             this.aclLabelPort.AutoSize = true;
-            this.aclLabelPort.Location = new System.Drawing.Point(0, 60);
+            this.aclLabelPort.Location = new System.Drawing.Point(0, 74);
+            this.aclLabelPort.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.aclLabelPort.Name = "aclLabelPort";
-            this.aclLabelPort.Size = new System.Drawing.Size(53, 13);
+            this.aclLabelPort.Size = new System.Drawing.Size(69, 17);
             this.aclLabelPort.TabIndex = 49;
             this.aclLabelPort.Text = "TCP Port:";
             // 
             // aclLabelHostname
             // 
             this.aclLabelHostname.AutoSize = true;
-            this.aclLabelHostname.Location = new System.Drawing.Point(0, 36);
+            this.aclLabelHostname.Location = new System.Drawing.Point(0, 44);
+            this.aclLabelHostname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.aclLabelHostname.Name = "aclLabelHostname";
-            this.aclLabelHostname.Size = new System.Drawing.Size(58, 13);
+            this.aclLabelHostname.Size = new System.Drawing.Size(76, 17);
             this.aclLabelHostname.TabIndex = 48;
             this.aclLabelHostname.Text = "Hostname:";
             // 
             // aclHostname
             // 
-            this.aclHostname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.aclHostname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.aclHostname.FormattingEnabled = true;
-            this.aclHostname.ItemHeight = 13;
-            this.aclHostname.Location = new System.Drawing.Point(64, 32);
+            this.aclHostname.ItemHeight = 16;
+            this.aclHostname.Location = new System.Drawing.Point(85, 39);
+            this.aclHostname.Margin = new System.Windows.Forms.Padding(4);
             this.aclHostname.Name = "aclHostname";
-            this.aclHostname.Size = new System.Drawing.Size(316, 21);
+            this.aclHostname.Size = new System.Drawing.Size(494, 24);
             this.aclHostname.TabIndex = 8;
             // 
             // aclPath
             // 
-            this.aclPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.aclPath.Location = new System.Drawing.Point(64, 80);
+            this.aclPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.aclPath.Location = new System.Drawing.Point(85, 98);
+            this.aclPath.Margin = new System.Windows.Forms.Padding(4);
             this.aclPath.Name = "aclPath";
-            this.aclPath.Size = new System.Drawing.Size(316, 20);
+            this.aclPath.Size = new System.Drawing.Size(494, 22);
             this.aclPath.TabIndex = 15;
             // 
             // aclPort
             // 
-            this.aclPort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.aclPort.Location = new System.Drawing.Point(64, 56);
+            this.aclPort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.aclPort.Location = new System.Drawing.Point(85, 69);
+            this.aclPort.Margin = new System.Windows.Forms.Padding(4);
             this.aclPort.Name = "aclPort";
-            this.aclPort.Size = new System.Drawing.Size(316, 20);
+            this.aclPort.Size = new System.Drawing.Size(494, 22);
             this.aclPort.TabIndex = 12;
             // 
             // aclSsl
             // 
             this.aclSsl.AutoSize = true;
-            this.aclSsl.Location = new System.Drawing.Point(3, 9);
+            this.aclSsl.Location = new System.Drawing.Point(4, 11);
+            this.aclSsl.Margin = new System.Windows.Forms.Padding(4);
             this.aclSsl.Name = "aclSsl";
-            this.aclSsl.Size = new System.Drawing.Size(82, 17);
+            this.aclSsl.Size = new System.Drawing.Size(104, 21);
             this.aclSsl.TabIndex = 5;
             this.aclSsl.Text = "Enable SSL";
             this.aclSsl.UseVisualStyleBackColor = true;
             this.aclSsl.CheckedChanged += new System.EventHandler(this.aclSsl_CheckedChanged);
             // 
-            // aclCreate
-            // 
-            this.aclCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.aclCreate.Cursor = System.Windows.Forms.Cursors.Default;
-            this.aclCreate.Location = new System.Drawing.Point(305, 452);
-            this.aclCreate.Name = "aclCreate";
-            this.aclCreate.Size = new System.Drawing.Size(75, 23);
-            this.aclCreate.TabIndex = 45;
-            this.aclCreate.Text = "Create";
-            this.aclCreate.UseVisualStyleBackColor = true;
-            this.aclCreate.Click += new System.EventHandler(this.aclCreate_Click);
-            // 
             // aclAccounts
             // 
-            this.aclAccounts.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.aclAccounts.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.aclAccounts.FormattingEnabled = true;
-            this.aclAccounts.Location = new System.Drawing.Point(0, 132);
+            this.aclAccounts.ItemHeight = 16;
+            this.aclAccounts.Location = new System.Drawing.Point(0, 162);
+            this.aclAccounts.Margin = new System.Windows.Forms.Padding(4);
             this.aclAccounts.Name = "aclAccounts";
-            this.aclAccounts.Size = new System.Drawing.Size(380, 95);
+            this.aclAccounts.Size = new System.Drawing.Size(579, 116);
             this.aclAccounts.TabIndex = 20;
             // 
             // sslTabPage
             // 
             this.sslTabPage.Controls.Add(this.sslSplitContainer);
-            this.sslTabPage.Location = new System.Drawing.Point(4, 22);
+            this.sslTabPage.Location = new System.Drawing.Point(4, 25);
+            this.sslTabPage.Margin = new System.Windows.Forms.Padding(4);
             this.sslTabPage.Name = "sslTabPage";
-            this.sslTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.sslTabPage.Size = new System.Drawing.Size(675, 486);
+            this.sslTabPage.Padding = new System.Windows.Forms.Padding(4);
+            this.sslTabPage.Size = new System.Drawing.Size(906, 632);
             this.sslTabPage.TabIndex = 4;
             this.sslTabPage.Text = "Ssl";
             this.sslTabPage.UseVisualStyleBackColor = true;
@@ -555,7 +479,8 @@ namespace CodePlex.Tools.HttpSysConfig
             // sslSplitContainer
             // 
             this.sslSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sslSplitContainer.Location = new System.Drawing.Point(3, 3);
+            this.sslSplitContainer.Location = new System.Drawing.Point(4, 4);
+            this.sslSplitContainer.Margin = new System.Windows.Forms.Padding(4);
             this.sslSplitContainer.Name = "sslSplitContainer";
             // 
             // sslSplitContainer.Panel1
@@ -583,8 +508,9 @@ namespace CodePlex.Tools.HttpSysConfig
             this.sslSplitContainer.Panel2.Controls.Add(this.sslCertHash);
             this.sslSplitContainer.Panel2.Controls.Add(this.sslPort);
             this.sslSplitContainer.Panel2.Controls.Add(this.sslCreate);
-            this.sslSplitContainer.Size = new System.Drawing.Size(669, 480);
-            this.sslSplitContainer.SplitterDistance = 280;
+            this.sslSplitContainer.Size = new System.Drawing.Size(898, 624);
+            this.sslSplitContainer.SplitterDistance = 375;
+            this.sslSplitContainer.SplitterWidth = 5;
             this.sslSplitContainer.TabIndex = 1;
             // 
             // sslTab
@@ -593,18 +519,20 @@ namespace CodePlex.Tools.HttpSysConfig
             this.sslTab.Controls.Add(this.sslTreeTab);
             this.sslTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sslTab.Location = new System.Drawing.Point(0, 0);
+            this.sslTab.Margin = new System.Windows.Forms.Padding(4);
             this.sslTab.Name = "sslTab";
             this.sslTab.SelectedIndex = 0;
-            this.sslTab.Size = new System.Drawing.Size(280, 480);
+            this.sslTab.Size = new System.Drawing.Size(375, 624);
             this.sslTab.TabIndex = 4;
             // 
             // sslListTab
             // 
             this.sslListTab.Controls.Add(this.sslList);
-            this.sslListTab.Location = new System.Drawing.Point(4, 22);
+            this.sslListTab.Location = new System.Drawing.Point(4, 25);
+            this.sslListTab.Margin = new System.Windows.Forms.Padding(4);
             this.sslListTab.Name = "sslListTab";
-            this.sslListTab.Padding = new System.Windows.Forms.Padding(3);
-            this.sslListTab.Size = new System.Drawing.Size(272, 454);
+            this.sslListTab.Padding = new System.Windows.Forms.Padding(4);
+            this.sslListTab.Size = new System.Drawing.Size(367, 595);
             this.sslListTab.TabIndex = 2;
             this.sslListTab.Text = "List View";
             this.sslListTab.UseVisualStyleBackColor = true;
@@ -613,19 +541,22 @@ namespace CodePlex.Tools.HttpSysConfig
             // 
             this.sslList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sslList.FormattingEnabled = true;
-            this.sslList.Location = new System.Drawing.Point(3, 3);
+            this.sslList.ItemHeight = 16;
+            this.sslList.Location = new System.Drawing.Point(4, 4);
+            this.sslList.Margin = new System.Windows.Forms.Padding(4);
             this.sslList.Name = "sslList";
-            this.sslList.Size = new System.Drawing.Size(266, 446);
+            this.sslList.Size = new System.Drawing.Size(359, 587);
             this.sslList.TabIndex = 0;
             this.sslList.SelectedIndexChanged += new System.EventHandler(this.sslList_SelectedIndexChanged);
             // 
             // sslTreeTab
             // 
             this.sslTreeTab.Controls.Add(this.sslTree);
-            this.sslTreeTab.Location = new System.Drawing.Point(4, 22);
+            this.sslTreeTab.Location = new System.Drawing.Point(4, 25);
+            this.sslTreeTab.Margin = new System.Windows.Forms.Padding(4);
             this.sslTreeTab.Name = "sslTreeTab";
-            this.sslTreeTab.Padding = new System.Windows.Forms.Padding(3);
-            this.sslTreeTab.Size = new System.Drawing.Size(272, 454);
+            this.sslTreeTab.Padding = new System.Windows.Forms.Padding(4);
+            this.sslTreeTab.Size = new System.Drawing.Size(366, 594);
             this.sslTreeTab.TabIndex = 1;
             this.sslTreeTab.Text = "Tree View";
             this.sslTreeTab.UseVisualStyleBackColor = true;
@@ -633,40 +564,43 @@ namespace CodePlex.Tools.HttpSysConfig
             // sslTree
             // 
             this.sslTree.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sslTree.Location = new System.Drawing.Point(3, 3);
+            this.sslTree.Location = new System.Drawing.Point(4, 4);
+            this.sslTree.Margin = new System.Windows.Forms.Padding(4);
             this.sslTree.Name = "sslTree";
-            this.sslTree.Size = new System.Drawing.Size(266, 448);
+            this.sslTree.Size = new System.Drawing.Size(358, 586);
             this.sslTree.TabIndex = 20;
             // 
             // sslLabelAppID
             // 
             this.sslLabelAppID.AutoSize = true;
-            this.sslLabelAppID.Location = new System.Drawing.Point(3, 60);
+            this.sslLabelAppID.Location = new System.Drawing.Point(4, 74);
+            this.sslLabelAppID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sslLabelAppID.Name = "sslLabelAppID";
-            this.sslLabelAppID.Size = new System.Drawing.Size(41, 13);
+            this.sslLabelAppID.Size = new System.Drawing.Size(52, 17);
             this.sslLabelAppID.TabIndex = 78;
             this.sslLabelAppID.Text = "App Id:";
             // 
             // sslAppId
             // 
-            this.sslAppId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.sslAppId.Location = new System.Drawing.Point(89, 57);
+            this.sslAppId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.sslAppId.Location = new System.Drawing.Point(119, 70);
+            this.sslAppId.Margin = new System.Windows.Forms.Padding(4);
             this.sslAppId.Name = "sslAppId";
-            this.sslAppId.Size = new System.Drawing.Size(291, 20);
+            this.sslAppId.Size = new System.Drawing.Size(386, 22);
             this.sslAppId.TabIndex = 77;
             // 
             // sslGroupBoxClientCert
             // 
-            this.sslGroupBoxClientCert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.sslGroupBoxClientCert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.sslGroupBoxClientCert.Controls.Add(this.sslCheckRevocation);
             this.sslGroupBoxClientCert.Controls.Add(this.sslGroupBoxRevocation);
             this.sslGroupBoxClientCert.Controls.Add(this.sslCeckUsage);
             this.sslGroupBoxClientCert.Controls.Add(this.sslUseDSMapper);
-            this.sslGroupBoxClientCert.Location = new System.Drawing.Point(3, 183);
+            this.sslGroupBoxClientCert.Location = new System.Drawing.Point(4, 225);
+            this.sslGroupBoxClientCert.Margin = new System.Windows.Forms.Padding(4);
             this.sslGroupBoxClientCert.Name = "sslGroupBoxClientCert";
-            this.sslGroupBoxClientCert.Size = new System.Drawing.Size(377, 200);
+            this.sslGroupBoxClientCert.Padding = new System.Windows.Forms.Padding(4);
+            this.sslGroupBoxClientCert.Size = new System.Drawing.Size(502, 246);
             this.sslGroupBoxClientCert.TabIndex = 76;
             this.sslGroupBoxClientCert.TabStop = false;
             this.sslGroupBoxClientCert.Text = "Client Certificate Settings";
@@ -676,9 +610,10 @@ namespace CodePlex.Tools.HttpSysConfig
             this.sslCheckRevocation.AutoSize = true;
             this.sslCheckRevocation.Checked = true;
             this.sslCheckRevocation.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.sslCheckRevocation.Location = new System.Drawing.Point(6, 63);
+            this.sslCheckRevocation.Location = new System.Drawing.Point(8, 78);
+            this.sslCheckRevocation.Margin = new System.Windows.Forms.Padding(4);
             this.sslCheckRevocation.Name = "sslCheckRevocation";
-            this.sslCheckRevocation.Size = new System.Drawing.Size(130, 17);
+            this.sslCheckRevocation.Size = new System.Drawing.Size(165, 21);
             this.sslCheckRevocation.TabIndex = 92;
             this.sslCheckRevocation.Text = "Check for Revocation";
             this.sslCheckRevocation.UseVisualStyleBackColor = true;
@@ -692,9 +627,11 @@ namespace CodePlex.Tools.HttpSysConfig
             this.sslGroupBoxRevocation.Controls.Add(this.sslDownload);
             this.sslGroupBoxRevocation.Controls.Add(this.sslLabelFreshness);
             this.sslGroupBoxRevocation.Controls.Add(this.sslFreshness);
-            this.sslGroupBoxRevocation.Location = new System.Drawing.Point(6, 86);
+            this.sslGroupBoxRevocation.Location = new System.Drawing.Point(8, 106);
+            this.sslGroupBoxRevocation.Margin = new System.Windows.Forms.Padding(4);
             this.sslGroupBoxRevocation.Name = "sslGroupBoxRevocation";
-            this.sslGroupBoxRevocation.Size = new System.Drawing.Size(364, 108);
+            this.sslGroupBoxRevocation.Padding = new System.Windows.Forms.Padding(4);
+            this.sslGroupBoxRevocation.Size = new System.Drawing.Size(485, 133);
             this.sslGroupBoxRevocation.TabIndex = 87;
             this.sslGroupBoxRevocation.TabStop = false;
             this.sslGroupBoxRevocation.Text = "Revocation Check Settings";
@@ -702,9 +639,10 @@ namespace CodePlex.Tools.HttpSysConfig
             // sslCheckFresh
             // 
             this.sslCheckFresh.AutoSize = true;
-            this.sslCheckFresh.Location = new System.Drawing.Point(6, 59);
+            this.sslCheckFresh.Location = new System.Drawing.Point(8, 73);
+            this.sslCheckFresh.Margin = new System.Windows.Forms.Padding(4);
             this.sslCheckFresh.Name = "sslCheckFresh";
-            this.sslCheckFresh.Size = new System.Drawing.Size(186, 17);
+            this.sslCheckFresh.Size = new System.Drawing.Size(242, 21);
             this.sslCheckFresh.TabIndex = 94;
             this.sslCheckFresh.Text = "Cache URLs with Freshness Time";
             this.sslCheckFresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -713,9 +651,10 @@ namespace CodePlex.Tools.HttpSysConfig
             // sslCheckOnlyCached
             // 
             this.sslCheckOnlyCached.AutoSize = true;
-            this.sslCheckOnlyCached.Location = new System.Drawing.Point(6, 38);
+            this.sslCheckOnlyCached.Location = new System.Drawing.Point(8, 47);
+            this.sslCheckOnlyCached.Margin = new System.Windows.Forms.Padding(4);
             this.sslCheckOnlyCached.Name = "sslCheckOnlyCached";
-            this.sslCheckOnlyCached.Size = new System.Drawing.Size(151, 17);
+            this.sslCheckOnlyCached.Size = new System.Drawing.Size(193, 21);
             this.sslCheckOnlyCached.TabIndex = 93;
             this.sslCheckOnlyCached.Text = "Only Check Cached URLs";
             this.sslCheckOnlyCached.UseVisualStyleBackColor = true;
@@ -723,45 +662,48 @@ namespace CodePlex.Tools.HttpSysConfig
             // sslLabelDownloadTimeout
             // 
             this.sslLabelDownloadTimeout.AutoSize = true;
-            this.sslLabelDownloadTimeout.Location = new System.Drawing.Point(3, 21);
+            this.sslLabelDownloadTimeout.Location = new System.Drawing.Point(4, 26);
+            this.sslLabelDownloadTimeout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sslLabelDownloadTimeout.Name = "sslLabelDownloadTimeout";
-            this.sslLabelDownloadTimeout.Size = new System.Drawing.Size(145, 13);
+            this.sslLabelDownloadTimeout.Size = new System.Drawing.Size(192, 17);
             this.sslLabelDownloadTimeout.TabIndex = 90;
             this.sslLabelDownloadTimeout.Text = "CRL Download Timeout (ms):";
             // 
             // sslDownload
             // 
-            this.sslDownload.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.sslDownload.Location = new System.Drawing.Point(154, 19);
+            this.sslDownload.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.sslDownload.Location = new System.Drawing.Point(205, 23);
+            this.sslDownload.Margin = new System.Windows.Forms.Padding(4);
             this.sslDownload.Name = "sslDownload";
-            this.sslDownload.Size = new System.Drawing.Size(201, 20);
+            this.sslDownload.Size = new System.Drawing.Size(267, 22);
             this.sslDownload.TabIndex = 89;
             // 
             // sslLabelFreshness
             // 
             this.sslLabelFreshness.AutoSize = true;
-            this.sslLabelFreshness.Location = new System.Drawing.Point(22, 80);
+            this.sslLabelFreshness.Location = new System.Drawing.Point(29, 98);
+            this.sslLabelFreshness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sslLabelFreshness.Name = "sslLabelFreshness";
-            this.sslLabelFreshness.Size = new System.Drawing.Size(122, 13);
+            this.sslLabelFreshness.Size = new System.Drawing.Size(165, 17);
             this.sslLabelFreshness.TabIndex = 88;
             this.sslLabelFreshness.Text = "CRL Freshness Time (s):";
             // 
             // sslFreshness
             // 
-            this.sslFreshness.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.sslFreshness.Location = new System.Drawing.Point(154, 77);
+            this.sslFreshness.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.sslFreshness.Location = new System.Drawing.Point(205, 95);
+            this.sslFreshness.Margin = new System.Windows.Forms.Padding(4);
             this.sslFreshness.Name = "sslFreshness";
-            this.sslFreshness.Size = new System.Drawing.Size(201, 20);
+            this.sslFreshness.Size = new System.Drawing.Size(267, 22);
             this.sslFreshness.TabIndex = 87;
             // 
             // sslCeckUsage
             // 
             this.sslCeckUsage.AutoSize = true;
-            this.sslCeckUsage.Location = new System.Drawing.Point(6, 19);
+            this.sslCeckUsage.Location = new System.Drawing.Point(8, 23);
+            this.sslCeckUsage.Margin = new System.Windows.Forms.Padding(4);
             this.sslCeckUsage.Name = "sslCeckUsage";
-            this.sslCeckUsage.Size = new System.Drawing.Size(91, 17);
+            this.sslCeckUsage.Size = new System.Drawing.Size(114, 21);
             this.sslCeckUsage.TabIndex = 84;
             this.sslCeckUsage.Text = "Check Usage";
             this.sslCeckUsage.UseVisualStyleBackColor = true;
@@ -769,31 +711,33 @@ namespace CodePlex.Tools.HttpSysConfig
             // sslUseDSMapper
             // 
             this.sslUseDSMapper.AutoSize = true;
-            this.sslUseDSMapper.Location = new System.Drawing.Point(6, 41);
+            this.sslUseDSMapper.Location = new System.Drawing.Point(8, 50);
+            this.sslUseDSMapper.Margin = new System.Windows.Forms.Padding(4);
             this.sslUseDSMapper.Name = "sslUseDSMapper";
-            this.sslUseDSMapper.Size = new System.Drawing.Size(145, 17);
+            this.sslUseDSMapper.Size = new System.Drawing.Size(185, 21);
             this.sslUseDSMapper.TabIndex = 81;
             this.sslUseDSMapper.Text = "Map to NT User Account";
             this.sslUseDSMapper.UseVisualStyleBackColor = true;
             // 
             // sslCertStore
             // 
-            this.sslCertStore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.sslCertStore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.sslCertStore.FormattingEnabled = true;
-            this.sslCertStore.ItemHeight = 13;
-            this.sslCertStore.Location = new System.Drawing.Point(89, 85);
+            this.sslCertStore.ItemHeight = 16;
+            this.sslCertStore.Location = new System.Drawing.Point(119, 105);
+            this.sslCertStore.Margin = new System.Windows.Forms.Padding(4);
             this.sslCertStore.Name = "sslCertStore";
-            this.sslCertStore.Size = new System.Drawing.Size(210, 21);
+            this.sslCertStore.Size = new System.Drawing.Size(278, 24);
             this.sslCertStore.TabIndex = 73;
             this.sslCertStore.SelectedIndexChanged += new System.EventHandler(this.sslCertStore_SelectedIndexChanged);
             // 
             // sslNegotiateClientCert
             // 
             this.sslNegotiateClientCert.AutoSize = true;
-            this.sslNegotiateClientCert.Location = new System.Drawing.Point(2, 160);
+            this.sslNegotiateClientCert.Location = new System.Drawing.Point(3, 197);
+            this.sslNegotiateClientCert.Margin = new System.Windows.Forms.Padding(4);
             this.sslNegotiateClientCert.Name = "sslNegotiateClientCert";
-            this.sslNegotiateClientCert.Size = new System.Drawing.Size(151, 17);
+            this.sslNegotiateClientCert.Size = new System.Drawing.Size(197, 21);
             this.sslNegotiateClientCert.TabIndex = 67;
             this.sslNegotiateClientCert.Text = "Negotiate Client Certificate";
             this.sslNegotiateClientCert.UseVisualStyleBackColor = true;
@@ -802,9 +746,10 @@ namespace CodePlex.Tools.HttpSysConfig
             // sslBrowse
             // 
             this.sslBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sslBrowse.Location = new System.Drawing.Point(305, 83);
+            this.sslBrowse.Location = new System.Drawing.Point(406, 102);
+            this.sslBrowse.Margin = new System.Windows.Forms.Padding(4);
             this.sslBrowse.Name = "sslBrowse";
-            this.sslBrowse.Size = new System.Drawing.Size(75, 23);
+            this.sslBrowse.Size = new System.Drawing.Size(100, 28);
             this.sslBrowse.TabIndex = 66;
             this.sslBrowse.Text = "Browse";
             this.sslBrowse.UseVisualStyleBackColor = true;
@@ -813,9 +758,10 @@ namespace CodePlex.Tools.HttpSysConfig
             // sslRawFilter
             // 
             this.sslRawFilter.AutoSize = true;
-            this.sslRawFilter.Location = new System.Drawing.Point(2, 136);
+            this.sslRawFilter.Location = new System.Drawing.Point(3, 167);
+            this.sslRawFilter.Margin = new System.Windows.Forms.Padding(4);
             this.sslRawFilter.Name = "sslRawFilter";
-            this.sslRawFilter.Size = new System.Drawing.Size(182, 17);
+            this.sslRawFilter.Size = new System.Drawing.Size(235, 21);
             this.sslRawFilter.TabIndex = 80;
             this.sslRawFilter.Text = "No Raw Filter (IIS 6.0 and below)";
             this.sslRawFilter.UseVisualStyleBackColor = true;
@@ -823,9 +769,10 @@ namespace CodePlex.Tools.HttpSysConfig
             // sslLabelCertStore
             // 
             this.sslLabelCertStore.AutoSize = true;
-            this.sslLabelCertStore.Location = new System.Drawing.Point(3, 88);
+            this.sslLabelCertStore.Location = new System.Drawing.Point(4, 108);
+            this.sslLabelCertStore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sslLabelCertStore.Name = "sslLabelCertStore";
-            this.sslLabelCertStore.Size = new System.Drawing.Size(85, 13);
+            this.sslLabelCertStore.Size = new System.Drawing.Size(113, 17);
             this.sslLabelCertStore.TabIndex = 57;
             this.sslLabelCertStore.Text = "Certificate Store:";
             // 
@@ -833,9 +780,10 @@ namespace CodePlex.Tools.HttpSysConfig
             // 
             this.sslDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sslDelete.Cursor = System.Windows.Forms.Cursors.Default;
-            this.sslDelete.Location = new System.Drawing.Point(143, 450);
+            this.sslDelete.Location = new System.Drawing.Point(190, 587);
+            this.sslDelete.Margin = new System.Windows.Forms.Padding(4);
             this.sslDelete.Name = "sslDelete";
-            this.sslDelete.Size = new System.Drawing.Size(75, 23);
+            this.sslDelete.Size = new System.Drawing.Size(100, 28);
             this.sslDelete.TabIndex = 35;
             this.sslDelete.Text = "Delete";
             this.sslDelete.UseVisualStyleBackColor = true;
@@ -845,9 +793,10 @@ namespace CodePlex.Tools.HttpSysConfig
             // 
             this.sslCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sslCancel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.sslCancel.Location = new System.Drawing.Point(305, 421);
+            this.sslCancel.Location = new System.Drawing.Point(406, 551);
+            this.sslCancel.Margin = new System.Windows.Forms.Padding(4);
             this.sslCancel.Name = "sslCancel";
-            this.sslCancel.Size = new System.Drawing.Size(75, 23);
+            this.sslCancel.Size = new System.Drawing.Size(100, 28);
             this.sslCancel.TabIndex = 55;
             this.sslCancel.Text = "Cancel";
             this.sslCancel.UseVisualStyleBackColor = true;
@@ -857,9 +806,10 @@ namespace CodePlex.Tools.HttpSysConfig
             // 
             this.sslApply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sslApply.Cursor = System.Windows.Forms.Cursors.Default;
-            this.sslApply.Location = new System.Drawing.Point(224, 421);
+            this.sslApply.Location = new System.Drawing.Point(298, 551);
+            this.sslApply.Margin = new System.Windows.Forms.Padding(4);
             this.sslApply.Name = "sslApply";
-            this.sslApply.Size = new System.Drawing.Size(75, 23);
+            this.sslApply.Size = new System.Drawing.Size(100, 28);
             this.sslApply.TabIndex = 50;
             this.sslApply.Text = "Apply";
             this.sslApply.UseVisualStyleBackColor = true;
@@ -869,9 +819,10 @@ namespace CodePlex.Tools.HttpSysConfig
             // 
             this.sslEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sslEdit.Cursor = System.Windows.Forms.Cursors.Default;
-            this.sslEdit.Location = new System.Drawing.Point(224, 450);
+            this.sslEdit.Location = new System.Drawing.Point(298, 587);
+            this.sslEdit.Margin = new System.Windows.Forms.Padding(4);
             this.sslEdit.Name = "sslEdit";
-            this.sslEdit.Size = new System.Drawing.Size(75, 23);
+            this.sslEdit.Size = new System.Drawing.Size(100, 28);
             this.sslEdit.TabIndex = 40;
             this.sslEdit.Text = "Edit";
             this.sslEdit.UseVisualStyleBackColor = true;
@@ -880,66 +831,70 @@ namespace CodePlex.Tools.HttpSysConfig
             // sslLabelCertHash
             // 
             this.sslLabelCertHash.AutoSize = true;
-            this.sslLabelCertHash.Location = new System.Drawing.Point(3, 110);
+            this.sslLabelCertHash.Location = new System.Drawing.Point(4, 135);
+            this.sslLabelCertHash.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sslLabelCertHash.Name = "sslLabelCertHash";
-            this.sslLabelCertHash.Size = new System.Drawing.Size(85, 13);
+            this.sslLabelCertHash.Size = new System.Drawing.Size(112, 17);
             this.sslLabelCertHash.TabIndex = 50;
             this.sslLabelCertHash.Text = "Certificate Hash:";
             // 
             // sslLabelPort
             // 
             this.sslLabelPort.AutoSize = true;
-            this.sslLabelPort.Location = new System.Drawing.Point(3, 34);
+            this.sslLabelPort.Location = new System.Drawing.Point(4, 42);
+            this.sslLabelPort.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sslLabelPort.Name = "sslLabelPort";
-            this.sslLabelPort.Size = new System.Drawing.Size(53, 13);
+            this.sslLabelPort.Size = new System.Drawing.Size(69, 17);
             this.sslLabelPort.TabIndex = 49;
             this.sslLabelPort.Text = "TCP Port:";
             // 
             // sslLabelAddress
             // 
             this.sslLabelAddress.AutoSize = true;
-            this.sslLabelAddress.Location = new System.Drawing.Point(3, 9);
+            this.sslLabelAddress.Location = new System.Drawing.Point(4, 11);
+            this.sslLabelAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sslLabelAddress.Name = "sslLabelAddress";
-            this.sslLabelAddress.Size = new System.Drawing.Size(61, 13);
+            this.sslLabelAddress.Size = new System.Drawing.Size(80, 17);
             this.sslLabelAddress.TabIndex = 48;
             this.sslLabelAddress.Text = "IP Address:";
             // 
             // sslAddress
             // 
-            this.sslAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.sslAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.sslAddress.FormattingEnabled = true;
-            this.sslAddress.ItemHeight = 13;
-            this.sslAddress.Location = new System.Drawing.Point(89, 6);
+            this.sslAddress.ItemHeight = 16;
+            this.sslAddress.Location = new System.Drawing.Point(119, 7);
+            this.sslAddress.Margin = new System.Windows.Forms.Padding(4);
             this.sslAddress.Name = "sslAddress";
-            this.sslAddress.Size = new System.Drawing.Size(291, 21);
+            this.sslAddress.Size = new System.Drawing.Size(386, 24);
             this.sslAddress.TabIndex = 8;
             // 
             // sslCertHash
             // 
-            this.sslCertHash.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.sslCertHash.Location = new System.Drawing.Point(89, 110);
+            this.sslCertHash.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.sslCertHash.Location = new System.Drawing.Point(119, 135);
+            this.sslCertHash.Margin = new System.Windows.Forms.Padding(4);
             this.sslCertHash.Name = "sslCertHash";
-            this.sslCertHash.Size = new System.Drawing.Size(291, 21);
+            this.sslCertHash.Size = new System.Drawing.Size(386, 24);
             this.sslCertHash.TabIndex = 15;
             // 
             // sslPort
             // 
-            this.sslPort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.sslPort.Location = new System.Drawing.Point(89, 31);
+            this.sslPort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.sslPort.Location = new System.Drawing.Point(119, 38);
+            this.sslPort.Margin = new System.Windows.Forms.Padding(4);
             this.sslPort.Name = "sslPort";
-            this.sslPort.Size = new System.Drawing.Size(291, 20);
+            this.sslPort.Size = new System.Drawing.Size(386, 22);
             this.sslPort.TabIndex = 12;
             // 
             // sslCreate
             // 
             this.sslCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sslCreate.Cursor = System.Windows.Forms.Cursors.Default;
-            this.sslCreate.Location = new System.Drawing.Point(305, 450);
+            this.sslCreate.Location = new System.Drawing.Point(406, 587);
+            this.sslCreate.Margin = new System.Windows.Forms.Padding(4);
             this.sslCreate.Name = "sslCreate";
-            this.sslCreate.Size = new System.Drawing.Size(75, 23);
+            this.sslCreate.Size = new System.Drawing.Size(100, 28);
             this.sslCreate.TabIndex = 45;
             this.sslCreate.Text = "Create";
             this.sslCreate.UseVisualStyleBackColor = true;
@@ -947,21 +902,19 @@ namespace CodePlex.Tools.HttpSysConfig
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 536);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(914, 661);
             this.Controls.Add(this.mainTab);
-            this.Controls.Add(this.menuStrip);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "HttpSysConfig";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
             this.mainTab.ResumeLayout(false);
             this.aclTabPage.ResumeLayout(false);
             this.aclSplitContainer.Panel1.ResumeLayout(false);
             this.aclSplitContainer.Panel2.ResumeLayout(false);
             this.aclSplitContainer.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aclSplitContainer)).EndInit();
             this.aclSplitContainer.ResumeLayout(false);
             this.aclTab.ResumeLayout(false);
             this.aclListTab.ResumeLayout(false);
@@ -970,6 +923,7 @@ namespace CodePlex.Tools.HttpSysConfig
             this.sslSplitContainer.Panel1.ResumeLayout(false);
             this.sslSplitContainer.Panel2.ResumeLayout(false);
             this.sslSplitContainer.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sslSplitContainer)).EndInit();
             this.sslSplitContainer.ResumeLayout(false);
             this.sslTab.ResumeLayout(false);
             this.sslListTab.ResumeLayout(false);
@@ -979,10 +933,14 @@ namespace CodePlex.Tools.HttpSysConfig
             this.sslGroupBoxRevocation.ResumeLayout(false);
             this.sslGroupBoxRevocation.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
-
         }
 
         #endregion
+
+        private System.Windows.Forms.Button aclDelete;
+        private System.Windows.Forms.Button aclCancel;
+        private System.Windows.Forms.Button aclApply;
+        private System.Windows.Forms.Button aclEdit;
+        private System.Windows.Forms.Button aclCreate;
     }
 }
